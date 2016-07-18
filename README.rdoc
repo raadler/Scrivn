@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Build Status](https://codeship.com/projects/<YOUR_PROJECT_UUID>/status?branch=master)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Scrivn is an app for fountain pens and inks. Users can add pens and inks to their
+personal collections, get the details of a given pen or ink, and see what other users
+have pens or inks in their collections. More features may be added later.
