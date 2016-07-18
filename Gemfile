@@ -33,6 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0d2dc6e7e03faf6f52ea8b9c99ac818b1d99c447
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
@@ -40,12 +43,15 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'valid_attribute'
   gem 'dotenv-rails'
+<<<<<<< HEAD
 =======
   gem 'byebug'
   gem 'coveralls', require: false
   gem 'pry'
   gem 'rspec-rails'
 >>>>>>> 95188231788ae019780a5519a1664ef1291c95a8
+=======
+>>>>>>> 0d2dc6e7e03faf6f52ea8b9c99ac818b1d99c447
 end
 
 group :development do
@@ -61,5 +67,8 @@ group :test do
   gem 'coveralls', require: false
   gem 'launchy', require: false
 end
+<<<<<<< HEAD
 =======
 >>>>>>> 95188231788ae019780a5519a1664ef1291c95a8
+=======
+>>>>>>> 0d2dc6e7e03faf6f52ea8b9c99ac818b1d99c447
