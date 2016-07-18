@@ -1,4 +1,4 @@
-== README
+# Scrivn
 
 ![Build Status](https://codeship.com/projects/25b4cdd0-2f3a-0134-7f62-4a25dba64f1f/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/raadler/Scrivn.png)
