@@ -32,6 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+<<<<<<< HEAD
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
@@ -39,6 +40,12 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'valid_attribute'
   gem 'dotenv-rails'
+=======
+  gem 'byebug'
+  gem 'coveralls', require: false
+  gem 'pry'
+  gem 'rspec-rails'
+>>>>>>> 95188231788ae019780a5519a1664ef1291c95a8
 end
 
 group :development do
@@ -48,8 +55,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+<<<<<<< HEAD
 
 group :test do
   gem 'coveralls', require: false
   gem 'launchy', require: false
 end
+=======
+>>>>>>> 95188231788ae019780a5519a1664ef1291c95a8

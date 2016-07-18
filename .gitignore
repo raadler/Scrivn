@@ -12,4 +12,7 @@
 !/log/.keep
 /tmp
 
+# Ignore .env
 .env
+
+/coverage
