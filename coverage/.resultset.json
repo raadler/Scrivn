@@ -1,0 +1,23 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/racheladler/challenges/Scrivn/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/racheladler/challenges/Scrivn/app/models/ink.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/racheladler/challenges/Scrivn/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1468872898
+  }
+}
