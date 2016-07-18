@@ -35,6 +35,7 @@ group :development, :test do
   gem 'byebug'
   gem 'coveralls', require: false
   gem 'pry'
+  gem 'rspec-rails'
 end
 
 group :development do
