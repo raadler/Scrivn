@@ -13,6 +13,6 @@
 /tmp
 
 # Ignore .env
-/.env
+.env
 
 /coverage
