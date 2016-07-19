@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+
+ActiveRecord::Schema.define(version: 20160718194648) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "inks", force: :cascade do |t|
+    t.string "color_name",   default: "unnamed ink", null: false
+    t.string "manufacturer"
+    t.text   "notes"
+  end
 end
