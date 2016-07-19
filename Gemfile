@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
   gem 'shoulda-matchers'
+  gem 'shoulda-context'
   gem 'valid_attribute'
   gem 'dotenv-rails'
   gem 'coveralls', require: false
