@@ -48,10 +48,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-<<<<<<< HEAD
     byebug (9.0.5)
-=======
->>>>>>> 0d2dc6e7e03faf6f52ea8b9c99ac818b1d99c447
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -216,18 +213,12 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   coveralls
   dotenv-rails
-<<<<<<< HEAD
-=======
-  factory_girl_rails
->>>>>>> 0d2dc6e7e03faf6f52ea8b9c99ac818b1d99c447
   jbuilder (~> 2.0)
   jquery-rails
   launchy
   pg (~> 0.15)
   pry-rails
   rails (= 4.2.6)
-  rspec-rails (~> 3.0)
-  sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda-matchers
   spring
