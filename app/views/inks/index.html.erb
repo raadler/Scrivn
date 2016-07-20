@@ -1,0 +1,8 @@
+<body>
+  <h1>Inks</h1>
+<% @inks.each do |ink| %>
+  <p><%= link_to ink.name, ink_path(ink) %></p>
+<% end %>
+
+<%= link_to "Add New Ink", new_ink_path %>
+</body>
