@@ -1,0 +1,16 @@
+<body>
+  <h4><%= link_to "Add New Ink", new_ink_path %></h4>
+  <h1>Inks</h1>
+<div class="ink_details">
+<% @inks.each do |ink| %>
+    <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
+    <p><%= ink.manufacturer %></p>
+    <p><%= ink.description %></p>
+    <p><%= ink.line %></p>
+    <p><%= link_to "Edit Ink", edit_ink_path(ink) %></p>
+    <p><%= link_to "Delete Ink", ink_path(ink), method: :delete %></p>
+<% end %>
+</div>
+
+
+</body>
