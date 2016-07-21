@@ -1,0 +1,10 @@
+<h5><%= link_to "All Inks", inks_path %></h5>
+
+<p class="name"><%= @ink.color_name %></p>
+<p><%= @ink.manufacturer %></p>
+<p><%= @ink.line %></p>
+<p><%= @ink.description %></p>
+
+
+<%= link_to "Edit Ink", edit_ink_path(@ink) %>
+<%= link_to "Delete Ink", ink_path(@ink), method: :delete %>

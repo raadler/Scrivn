@@ -12,4 +12,65 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+ body {
+   background-image: url('morescrolls.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: top;
+   font-family: 'Eagle Lake', cursive;
+ }
+
+h1 {
+  color: #8F0000;
+  font-family: 'Eagle Lake', cursive;
+  text-align: center;
+}
+
+h3 {
+  color: #8F2621;
+  font-family: 'Sofia', cursive;
+  text-align: center;
+}
+
+a {
+  color: #D69400;
+  font-family: 'Sofia', cursive;
+}
+
+.ink_details {
+  color: #8F0000;
+  font-family: 'Eagle Lake', cursive;
+  font-size: 10px;
+}
+
+label {
+  color: #8F0000;
+}
+
+#ink_color_name {
+  background-color: transparent;
+  color: #8F0000;
+}
+
+#ink_manufacturer {
+  background-color: transparent;
+  color: #8F0000;
+}
+
+#ink_line {
+  background-color: transparent;
+  color: #8F0000;
+}
+
+#ink_description {
+  background-color: transparent;
+  color: #8F0000;
+}
+
+.name {
+  color: #A1442F;
+}

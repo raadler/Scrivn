@@ -15,7 +15,7 @@ class InksController < ApplicationController
     @ink = Ink.new(ink_params)
     if @ink.save
       flash[:notice] = "Ink successfully added!"
-      redirect_to @ink
+      redirect_to ink_path(@ink)
     else
       flash[:notice] = "There were problems saving your ink."
       flash[:errors] = @ink.errors.full_messages.join(", ")
