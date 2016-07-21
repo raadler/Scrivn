@@ -1,0 +1,23 @@
+<div class='newinkform'>
+  <%= form_for @ink do |f| %>
+  <div class='ink-form'>
+    <div class="color-name">
+      <%= f.label :color_name, 'Color Name' %>
+      <%= f.text_field :color_name %>
+    </div>
+    <div class="manufacturer">
+      <%= f.label :manufacturer, 'Manufacturer' %>
+      <%= f.text_field :manufacturer %>
+    </div>
+    <div class="line">
+      <%= f.label :line, 'Line' %>
+      <%= f.text_field :line %>
+    </div>
+    <div class="description">
+      <%= f.label :description, 'Description' %>
+      <%= f.text_field :description %>
+    </div>
+    <%= f.submit class: 'button' %>
+  </div>
+  <% end %>
+</div>
