@@ -14,11 +14,9 @@ RSpec.describe User, type: :model do
 
   it { should have_valid(:username).when('sadusername') }
   it { should_not have_valid(:username).when(nil, '') }
-  it { should validate_uniqueness_of(:username) }
 
   it { should have_valid(:email).when('sad@gmail.com') }
   it { should_not have_valid(:email).when(nil, '') }
-  it { should validate_uniqueness_of(:email) }
 
   it { should have_valid(:encrypted_password).when('123456') }
   it { should_not have_valid(:encrypted_password).when(nil, '') }
