@@ -191,6 +191,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shoulda (2.11.3)
     shoulda-context (1.2.1)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
@@ -255,6 +256,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shoulda
   shoulda-context
   shoulda-matchers
   spring

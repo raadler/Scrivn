@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  subject do
+     FactoryGirl.build(:user)
+  end
   let(:user) do
     User.new(
       username: 'CalligraphyPuffin',
@@ -9,14 +12,14 @@ RSpec.describe User, type: :model do
     )
   end
 
-  it { is_expected.to have_valid(:username).when('sadusername') }
-  it { is_expected.to_not have_valid(:username).when(nil, '') }
-  it { expect(user).to validate_uniqueness_of(:username) }
+  it { should have_valid(:username).when('sadusername') }
+  it { should_not have_valid(:username).when(nil, '') }
+  it { should validate_uniqueness_of(:username) }
 
-  it { is_expected.to have_valid(:email).when('sad@gmail.com') }
-  it { is_expected.to_not have_valid(:email).when(nil, '') }
-  it { expect(user).to validate_uniqueness_of(:email) }
+  it { should have_valid(:email).when('sad@gmail.com') }
+  it { should_not have_valid(:email).when(nil, '') }
+  it { should validate_uniqueness_of(:email) }
 
-  it { is_expected.to have_valid(:encrypted_password).when('123456') }
-  it { is_expected.to_not have_valid(:encrypted_password).when(nil, '') }
+  it { should have_valid(:encrypted_password).when('123456') }
+  it { should_not have_valid(:encrypted_password).when(nil, '') }
 end
