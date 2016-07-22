@@ -31,20 +31,21 @@ gem 'foundation-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'devise'
+gem 'omniauth'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
-  gem 'shoulda-matchers'
   gem 'shoulda-context'
+  gem 'shoulda-matchers'
   gem 'valid_attribute'
   gem 'dotenv-rails'
   gem 'coveralls', require: false
   gem 'pry'
-  gem 'factory_girl_rails'
-
 end
 
 group :development do
@@ -57,6 +58,5 @@ end
 
 
 group :test do
-  gem 'coveralls', require: false
   gem 'launchy', require: false
 end
