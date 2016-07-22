@@ -45,7 +45,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'coveralls', require: false
   gem 'pry'
-  gem 'factory_girl_rails'
 
 end
 
