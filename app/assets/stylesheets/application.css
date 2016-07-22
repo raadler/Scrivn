@@ -30,9 +30,15 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  color: #8F0000;
+  font-family: 'Eagle Lake', cursive;
+  text-align: center;
+}
+
 h3 {
   color: #8F2621;
-  font-family: 'Sofia', cursive;
+  font-family: 'Eagle Lake', cursive;
   text-align: center;
 }
 
