@@ -9,6 +9,11 @@ class InksController < ApplicationController
 
   def new
     @ink = Ink.new
+
+    unless user_signed_in?
+      flash[:error] = 'You must be signed in to add a new ink.'
+      redirect_to inks_path
+    end
   end
 
   def create
