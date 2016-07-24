@@ -3,8 +3,19 @@ require 'rails_helper'
 feature 'user deletes ink' do
   let!(:ink) { FactoryGirl.create(:ink) }
   let!(:another_ink) { FactoryGirl.create(:ink) }
+  let!(:user) { FactoryGirl.create(:user) }
+  let!(:admin) { FactoryGirl.create(:user, admin: true)}
 
-  scenario 'user successfully deletes ink' do
+  scenario 'non-admin cannot delete ink' do
+    sign_in(user)
+
+    visit ink_path(ink)
+    expect(page).to_not have_link('Delete Ink')
+  end
+
+  scenario 'admin successfully deletes ink' do
+    sign_in(admin)
+
     visit ink_path(ink)
     click_link('Delete Ink')
 

@@ -5,6 +5,9 @@
 <p><%= @ink.line %></p>
 <p><%= @ink.description %></p>
 
-
-<%= link_to "Edit Ink", edit_ink_path(@ink) %>
-<%= link_to "Delete Ink", ink_path(@ink), method: :delete %>
+<% if user_signed_in? && (@ink.user == current_user || current_user.admin) %>
+  <p><%= link_to "Edit Ink", edit_ink_path(@ink) %></p>
+<% end %>
+<% if user_signed_in? && current_user.admin %>
+  <p><%= link_to "Delete Ink", ink_path(@ink), method: :delete %></p>
+<% end %>
