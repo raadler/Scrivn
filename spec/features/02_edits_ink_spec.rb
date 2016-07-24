@@ -1,39 +1,81 @@
 require 'rails_helper'
 
 feature 'edits ink' do
-  let!(:my_ink) { FactoryGirl.create(:ink) }
-  scenario 'visits edit ink form' do
-    visit edit_ink_path(my_ink)
+  let!(:user) { FactoryGirl.create(:user) }
+  let!(:user2) { FactoryGirl.create(:user) }
+  let!(:user3) { FactoryGirl.create(:user, admin: true) }
+  let!(:ink) { FactoryGirl.create(:ink, user: user) }
 
-    expect(page).to have_selector('form')
-    expect(page).to have_content('Color Name')
-    expect(page).to have_content('Line')
-    expect(page).to have_content('Manufacturer')
-    expect(page).to have_content('Description')
+  context 'inauthenticated user' do
+    scenario 'unauthorized user tries to edit ink' do
+      visit ink_path(ink)
 
-    expect(find('#ink_color_name').value).to eq(my_ink[:color_name])
-    expect(find('#ink_line').value).to eq(my_ink[:line])
-    expect(find('#ink_manufacturer').value).to eq(my_ink[:manufacturer])
-    expect(find('#ink_description').value).to eq(my_ink[:description])
+      expect(page).not_to have_link('Edit Ink')
+    end
   end
 
-  scenario 'successfully updates ink' do
-    visit edit_ink_path(my_ink)
-    fill_in 'Line', with: "Noodler's Pigmented Inks"
-    click_button 'Update Ink'
+  context 'authenticated user who has created this ink' do
+    before do
+      sign_in(user)
+    end
 
-    expect(page).to have_content('Ink successfully saved!')
-    expect(page).to have_content("Noodler's Pigmented Inks")
+    scenario 'user can edit their own ink' do
+      visit edit_ink_path(ink)
+
+      expect(page).to have_selector('form')
+      expect(page).to have_content('Color Name')
+      expect(page).to have_content('Line')
+      expect(page).to have_content('Manufacturer')
+      expect(page).to have_content('Description')
+
+      expect(find('#ink_color_name').value).to eq(ink[:color_name])
+      expect(find('#ink_line').value).to eq(ink[:line])
+      expect(find('#ink_manufacturer').value).to eq(ink[:manufacturer])
+      expect(find('#ink_description').value).to eq(ink[:description])
+    end
+
+    scenario 'successfully updates ink' do
+      visit edit_ink_path(ink)
+      fill_in 'Line', with: "Noodler's Pigmented Inks"
+      click_button 'Update Ink'
+
+      expect(page).to have_content('Ink successfully saved!')
+      expect(page).to have_content("Noodler's Pigmented Inks")
+    end
+
+    scenario 'does not complete required fields' do
+      visit edit_ink_path(ink)
+
+      fill_in 'Manufacturer', with: ''
+      click_button 'Update Ink'
+
+      expect(page).to have_content("Manufacturer can't be blank")
+      expect(page).not_to have_content('Ink successfully saved!')
+      expect(find('#ink_color_name').value).to eq(ink[:color_name])
+    end
   end
 
-  scenario 'does not complete required fields' do
-    visit edit_ink_path(my_ink)
+  context 'user did not create this ink' do
+    before do
+      sign_in(user2)
+    end
 
-    fill_in 'Manufacturer', with: ''
-    click_button 'Update Ink'
+    scenario 'cannot edit an ink someone else created' do
+      visit ink_path(ink)
 
-    expect(page).to have_content("Manufacturer can't be blank")
-    expect(page).not_to have_content('Ink successfully saved!')
-    expect(find('#ink_color_name').value).to eq(my_ink[:color_name])
+      expect(page).not_to have_link('Edit Ink')
+    end
+  end
+
+  context 'user is an admin' do
+    before do
+      sign_in(user3)
+    end
+
+    scenario 'admin can delete any ink' do
+      visit ink_path(ink)
+
+      expect(page).to have_link('Edit Ink')
+    end
   end
 end

@@ -1,6 +1,6 @@
 class InksController < ApplicationController
   def index
-    @inks = Ink.all
+    @inks = Ink.all.order('color_name ASC')
   end
 
   def show
@@ -18,6 +18,8 @@ class InksController < ApplicationController
 
   def create
     @ink = Ink.new(ink_params)
+    @ink.user = current_user
+
     if @ink.save
       flash[:notice] = "Ink successfully added!"
       redirect_to ink_path(@ink)
@@ -47,6 +49,7 @@ class InksController < ApplicationController
   end
 
   def destroy
+
     Ink.find(params[:id]).destroy
     redirect_to inks_path
   end

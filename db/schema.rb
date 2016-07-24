@@ -11,35 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722143040) do
+ActiveRecord::Schema.define(version: 20160724195403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "inks", force: :cascade do |t|
-    t.string "color_name",   default: "unnamed ink", null: false
-    t.string "manufacturer",                         null: false
-    t.text   "description"
-    t.string "line"
+    t.string  "color_name",   default: "unnamed ink", null: false
+    t.string  "manufacturer",                         null: false
+    t.text    "description"
+    t.string  "line"
+    t.integer "user_id"
   end
 
+  add_index "inks", ["user_id"], name: "index_inks_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.string   "username",                            null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "username",                               null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "inks", "users"
 end
