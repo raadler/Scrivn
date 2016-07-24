@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724195403) do
+ActiveRecord::Schema.define(version: 20160724220004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20160724195403) do
   end
 
   add_index "inks", ["user_id"], name: "index_inks_on_user_id", using: :btree
+
+  create_table "user_inks", force: :cascade do |t|
+    t.integer "ink_id",                         null: false
+    t.integer "user_id",                        null: false
+    t.string  "color_family"
+    t.boolean "is_cartridge",   default: false, null: false
+    t.boolean "is_bottled",     default: false, null: false
+    t.string  "cartridge_size"
+    t.integer "bottle_size"
+    t.text    "notes"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",                               null: false
