@@ -3,8 +3,9 @@ FactoryGirl.define do
     sequence(:username) { |n| "Montblanc#{n}" }
     sequence(:email) { |n| "iloveinks#{n}@gmail.com" }
     password 'password'
+    admin false
   end
-  
+
   factory :ink do
     sequence(:color_name){ |n| "Baystate Blue #{n}" }
     manufacturer "Noodler's"
