@@ -18,7 +18,6 @@ class InksController < ApplicationController
 
   def create
     @ink = Ink.new(ink_params)
-    @ink.user = current_user
 
     if @ink.save
       flash[:notice] = "Ink successfully added!"
