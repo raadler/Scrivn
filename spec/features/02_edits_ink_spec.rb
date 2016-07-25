@@ -2,9 +2,7 @@ require 'rails_helper'
 
 feature 'edits ink' do
   let!(:user) { FactoryGirl.create(:user) }
-  let!(:user2) { FactoryGirl.create(:user) }
-  let!(:user3) { FactoryGirl.create(:user, admin: true) }
-  let!(:ink) { FactoryGirl.create(:ink, user: user) }
+  let!(:ink) { FactoryGirl.create(:ink) }
 
   context 'inauthenticated user' do
     scenario 'unauthorized user tries to edit ink' do
@@ -14,12 +12,12 @@ feature 'edits ink' do
     end
   end
 
-  context 'authenticated user who has created this ink' do
+  context 'authenticated user' do
     before do
       sign_in(user)
     end
 
-    scenario 'user can edit their own ink' do
+    scenario 'user visits edit ink page' do
       visit edit_ink_path(ink)
 
       expect(page).to have_selector('form')
@@ -52,30 +50,6 @@ feature 'edits ink' do
       expect(page).to have_content("Manufacturer can't be blank")
       expect(page).not_to have_content('Ink successfully saved!')
       expect(find('#ink_color_name').value).to eq(ink[:color_name])
-    end
-  end
-
-  context 'user did not create this ink' do
-    before do
-      sign_in(user2)
-    end
-
-    scenario 'cannot edit an ink someone else created' do
-      visit ink_path(ink)
-
-      expect(page).not_to have_link('Edit Ink')
-    end
-  end
-
-  context 'user is an admin' do
-    before do
-      sign_in(user3)
-    end
-
-    scenario 'admin can delete any ink' do
-      visit ink_path(ink)
-
-      expect(page).to have_link('Edit Ink')
     end
   end
 end
