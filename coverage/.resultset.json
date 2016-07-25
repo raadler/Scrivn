@@ -14,6 +14,7 @@
         null,
         null,
         1,
+        1,
         null
       ],
       "/Users/racheladler/challenges/Scrivn/app/helpers/application_helper.rb": [
@@ -25,6 +26,7 @@
         1,
         1,
         null,
+        1,
         1,
         null
       ],
@@ -43,24 +45,23 @@
       "/Users/racheladler/challenges/Scrivn/app/controllers/inks_controller.rb": [
         1,
         1,
-        18,
+        15,
         null,
         null,
         1,
-        7,
+        5,
         null,
         null,
         1,
-        4,
+        3,
         null,
-        4,
+        3,
+        0,
+        0,
+        null,
+        null,
+        null,
         1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        2,
         2,
         null,
         2,
@@ -117,19 +118,19 @@
         1,
         null,
         1,
-        20,
+        16,
         null,
         null,
         null,
         null,
         null,
         null,
-        20,
-        20,
+        16,
+        16,
         null,
         null
       ]
     },
-    "timestamp": 1469397985
+    "timestamp": 1469459566
   }
 }

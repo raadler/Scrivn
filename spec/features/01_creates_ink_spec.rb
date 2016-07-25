@@ -8,9 +8,7 @@ feature 'creates ink' do
       scenario 'unauthorized user visits new ink form' do
         visit inks_path
 
-        click_link 'Add New Ink'
-
-        expect(page).to have_content('You must be signed in to add a new ink')
+        expect(page).not_to have_link('Add New Ink')
       end
     end
 
@@ -44,7 +42,7 @@ feature 'creates ink' do
       expect(page).to have_content(my_ink[:name])
     end
 
-    scenario 'does not comeple required fields' do
+    scenario 'does not comeplete required fields' do
       visit inks_path
       click_link 'Add New Ink'
       fill_in 'Color Name', with: my_ink[:color_name]
