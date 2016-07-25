@@ -44,8 +44,10 @@
       ],
       "/Users/racheladler/challenges/Scrivn/app/controllers/inks_controller.rb": [
         1,
+        null,
+        null,
         1,
-        15,
+        16,
         null,
         null,
         1,
@@ -118,19 +120,51 @@
         1,
         null,
         1,
-        16,
+        18,
         null,
         null,
         null,
         null,
         null,
         null,
-        16,
-        16,
+        18,
+        18,
         null,
         null
+      ],
+      "/Users/racheladler/challenges/Scrivn/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/racheladler/challenges/Scrivn/app/controllers/admin/users_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/racheladler/challenges/Scrivn/app/controllers/user_inks_controller.rb": [
+        0,
+        0
       ]
     },
-    "timestamp": 1469459566
+    "timestamp": 1469485697
   }
 }

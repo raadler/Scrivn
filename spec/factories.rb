@@ -12,4 +12,16 @@ FactoryGirl.define do
     description 'A pigmented ink that will totally destroy pens if given the chance'
     line 'Awesome Ink'
   end
+
+  factory :user_ink do
+    association :ink
+    association :user
+    color_family 'Blue'
+    is_cartridge false
+    is_bottle true
+    bottle_size 89
+    num_bottles 1
+    favorite true
+    will_sell false
+  end
 end
