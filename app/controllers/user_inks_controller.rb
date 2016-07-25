@@ -1,0 +1,2 @@
+class UserInksController < ApplicationController
+end 
