@@ -1,4 +1,6 @@
 class InksController < ApplicationController
+  # before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @inks = Ink.all.order('color_name ASC')
   end

@@ -13,7 +13,7 @@ feature 'creates ink' do
     end
 
   context 'user is signed in' do
-    before do
+    before(:each) do
       sign_in(user)
     end
 
