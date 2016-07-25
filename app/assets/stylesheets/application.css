@@ -24,6 +24,10 @@
    font-family: 'Eagle Lake', cursive;
  }
 
+.add-ink {
+
+}
+
 h1 {
   color: #8F0000;
   font-family: 'Eagle Lake', cursive;
@@ -47,10 +51,17 @@ a {
   font-family: 'Sofia', cursive;
 }
 
-.ink_details {
+.ink-details {
   color: #8F0000;
+  background:rgba(255,255,255,0.5);
   font-family: 'Eagle Lake', cursive;
   font-size: 10px;
+  width: 125px;
+}
+
+.add-delete {
+  background:rgba(255,255,255,0.5);
+  width: 125px;
 }
 
 label {
