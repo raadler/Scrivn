@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  has_many :inks
+  has_many :user_inks
+  has_many :inks, through: :user_inks
 end
