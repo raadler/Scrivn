@@ -1,17 +1,14 @@
-<h5><%= link_to "All Inks", inks_path %></h5>
-
-<div class="ink-details">
-  <p class="name"><%= @ink.color_name %></p>
-  <p><%= @ink.manufacturer %></p>
-  <p><%= @ink.line %></p>
-  <p><%= @ink.description %></p>
-</div>
-
-<div class="add-delete">
-  <% if user_signed_in? %>
+<div class="small-11 columns">
+  <div class="show-details">
+    <p class="name"><%= @ink.color_name %></p>
+    <p><%= @ink.manufacturer %></p>
+    <p><%= @ink.line %></p>
+    <p><%= @ink.description %></p>
+    <% if user_signed_in? %>
     <p><%= link_to "Edit Ink", edit_ink_path(@ink) %></p>
-  <% end %>
-  <% if user_signed_in? && current_user.admin %>
+    <% end %>
+    <% if user_signed_in? && current_user.admin %>
     <p><%= link_to "Delete Ink", ink_path(@ink), method: :delete %></p>
-  <% end %>
+    <% end %>
+  </div>
 </div>
