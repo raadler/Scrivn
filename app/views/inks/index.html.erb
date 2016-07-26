@@ -3,13 +3,17 @@
     <h4 class="add-ink"><%= link_to "Add New Ink", new_ink_path %></h4>
   <% end %>
 
-  <h1>Inks</h1>
-  <div class="ink-details">
+  <h1 class="title">Inks</h1>
+  <div class="row">
     <% @inks.each do |ink| %>
-        <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
-        <p><%= ink.manufacturer %></p>
-        <p><%= ink.line %></p>
-        <p><%= ink.description %></p>
+      <div class="small-3 columns">
+        <div class="ink-details">
+          <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
+          <p><%= ink.manufacturer %></p>
+          <p><%= ink.line %></p>
+          <p><%= ink.description %></p>
+        </div>
+      </div>
     <% end %>
   </div>
 
