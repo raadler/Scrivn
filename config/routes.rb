@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    resources :user_inks
+  end
 
   namespace :admin do
     resources :users

@@ -1,0 +1,50 @@
+<div class="ink-details">
+<p><%= @color_name %></p>
+<p><%= @manufacturer %></p>
+<% if @line %>
+  <p><%= @line %></p>
+<% end %>
+<% if @description %>
+  <p><%= @description %></p>
+<% end %>
+<% if @user_ink.user_id == current_user.id %>
+  <p><%= link_to "Edit Ink Details", edit_user_user_ink_path(@user_ink.user_id, @user_ink) %></p>
+<% end %>
+<% if @user_ink.is_cartridge == true %>
+  <p>This ink is in a cartridge</p>
+<% end %>
+<% if @user_ink.is_bottled == true %>
+  <p>This ink is bottled</p>
+<% end %>
+<% if @user_ink.bottle_size && @user_ink.bottle_size != '' %>
+  <p>Bottle Size: <%= @user_ink.bottle_size %></p>
+<% end %>
+<% if @user_ink.num_bottles %>
+  <p>Number of bottles: <%= @user_ink.num_bottles %></p>
+<% end %>
+<% if @user_ink.cartridge_size && @user_ink.cartridge_size != '' %>
+  <p>Cartridge Size: <%= @user_ink.cartridge_size %></p>
+<% end %>
+<% if @user_ink.num_cartridges %>
+  <p>Number of cartridges: <%= @user_ink.num_cartridges %></p>
+<% end %>
+<p>
+  Favorite?
+<% if @user_ink.favorite == true %>
+  Yes
+<% else %>
+  No
+<% end %>
+</p>
+<p>
+  Willing to Sell or Trade?
+<% if @user_ink.will_sell == true %>
+  Yes
+<% else %>
+  No
+<% end %>
+</p>
+<% if @user_ink.notes && @user_ink.notes != '' %>
+  <p>Notes: <%= @user_ink.notes %></p>
+<% end %>
+</div>
