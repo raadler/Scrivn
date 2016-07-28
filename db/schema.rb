@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727213148) do
+ActiveRecord::Schema.define(version: 20160728205343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,12 +30,12 @@ ActiveRecord::Schema.define(version: 20160727213148) do
     t.boolean "is_cartridge",   default: false
     t.boolean "is_bottled",     default: false
     t.string  "cartridge_size"
-    t.integer "bottle_size"
     t.text    "notes"
     t.integer "num_bottles"
     t.integer "num_cartridges"
     t.boolean "favorite",       default: false
     t.boolean "will_sell",      default: false
+    t.string  "bottle_size"
   end
 
   create_table "users", force: :cascade do |t|
