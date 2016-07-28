@@ -6,7 +6,7 @@
   <h1 class="title">Inks</h1>
   <div class="row">
     <% @inks.each do |ink| %>
-      <div class="small-3 columns">
+      <div class="small-12 medium-3 columns">
         <div class="ink-details">
           <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
           <p><%= ink.manufacturer %></p>

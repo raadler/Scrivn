@@ -55,9 +55,8 @@ h5 {
 }
 
 a {
-  color: #703C35;
+  color: #1A777C;
   font-family: 'Eagle Lake', cursive;
-  font-size: 16px;
 }
 
 .ink-details {
@@ -88,11 +87,7 @@ label {
 
 .name {
   color: #B53274;
-  font-size: 26px;
-}
-
-.top-bar {
-  color: #703C35;
+  font-size: 22px;
 }
 
 .show-details {
@@ -101,6 +96,7 @@ label {
   color: #8F0000;
   font-size: 20px;
 }
+
 .title {
   text-align: center;
   margin-left: auto;
