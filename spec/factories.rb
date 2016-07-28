@@ -18,7 +18,7 @@ FactoryGirl.define do
     association :user
     color_family 'Blue'
     is_cartridge false
-    is_bottle true
+    is_bottled true
     bottle_size 89
     num_bottles 1
     favorite true
