@@ -19,6 +19,9 @@
           <ul class="dropdown menu" data-dropdown-menu>
             <li class="menu-text">Scrivn</li>
             <li><%= link_to "All Inks", inks_path %></li>
+            <% if user_signed_in? %>
+            <li><%= link_to "Your Inks", user_path(current_user) %></li>
+              <% end %>
           </ul>
         </div>
         <div class="top-bar-right">

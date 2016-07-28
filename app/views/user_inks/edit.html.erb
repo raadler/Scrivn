@@ -1,0 +1,68 @@
+<h2>Edit Details for <%= @color_name %></h2>
+<div class='userinkform'>
+  <%= form_for [@user, @user_ink] do |f| %>
+  <div class='user-ink-form'>
+    <div class="form-field">
+      <%= f.label :color_family, 'Color Family' %>
+      <%= f.text_field :color_family %>
+    </div>
+    <div class="form-field">
+      <%= f.label :is_cartridge, "Is this ink in a cartridge?" %>
+      <div class="inline">
+        <%= f.label :is_cartridge, "Yes", :value => "true"  %>
+        <%= f.radio_button :is_cartridge, true %>
+        <%= f.label :is_cartridge, "No", :value => "false" %>
+        <%= f.radio_button :is_cartridge, false %>
+      </div>
+    </div>
+    <div class="form-field">
+      <%= f.label :cartridge_size, 'Cartridge Size' %>
+      <%= f.text_field :cartridge_size %>
+    </div>
+    <div class="form-field">
+      <%= f.label :num_cartridges, 'Number of Cartridges' %>
+      <%= f.text_field :num_cartridges %>
+    </div>
+    <div class="form-field">
+      <%= f.label :is_bottled, "Is this ink in a bottle?" %>
+      <div class="inline">
+        <%= f.label :is_bottled, "Yes", :value => "true"  %>
+        <%= f.radio_button :is_bottled, true %>
+        <%= f.label :is_bottled, "No", :value => "false" %>
+        <%= f.radio_button :is_bottled, false %>
+    </div>
+    <div class="form-field">
+      <%= f.label :bottle_size, 'Bottle Size' %>
+      <%= f.text_field :bottle_size %>
+    </div>
+    <div class="form-field">
+      <%= f.label :num_bottles, 'Number of Bottles' %>
+      <%= f.text_field :num_bottles %>
+    </div>
+    <div class="form-field">
+      <%= f.label :favorite, "Display this Ink as a Favorite?" %>
+      <div class="inline">
+        <%= f.label :favorite, "Yes", :value => "true"  %>
+        <%= f.radio_button :favorite, true %>
+        <%= f.label :favorite, "No", :value => "false" %>
+        <%= f.radio_button :favorite, false %>
+      </div>
+    </div>
+    <div class="form-field">
+      <%= f.label :will_sell, "Willing to Sell or Trade?" %>
+      <div class="inline">
+        <%= f.label :will_sell, "Yes", :value => "true"  %>
+        <%= f.radio_button :will_sell, true %>
+        <%= f.label :will_sell, "No", :value => "false" %>
+        <%= f.radio_button :will_sell, false %>
+      </div>
+    </div>
+    <div class="form-field">
+      <%= f.label :notes, 'Notes' %>
+      <%= f.text_area :notes %>
+    </div>
+    </div>
+    <%= f.submit class: 'button' %>
+  </div>
+  <% end %>
+</div>
