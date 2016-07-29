@@ -66,6 +66,19 @@ a {
   font-size: 20px;
   margin: 3px !important;
   padding-left: 3px;
+  text-align: center;
+}
+
+.picture-small {
+  max-width:250px;
+  max-height:250px;
+}
+
+.picture {
+  max-width:500px;
+  max-height:500px;
+  padding-left: auto
+  padding-right: auto;
 }
 
 .add-delete {
@@ -76,6 +89,7 @@ a {
 label {
   color: #8F0000;
 }
+
 
 .form-field {
   color: #8F0000;
