@@ -5,6 +5,9 @@
     </div>
   <% end %>
   <div class="show-details">
+    <% unless @ink.ink_pic.blank? %>
+      <div class="picture"><%= image_tag @ink.ink_pic %></div>
+    <% end %>
     <p class="name"><%= @ink.color_name %></p>
     <p><%= @ink.manufacturer %></p>
     <p><%= @ink.line %></p>
