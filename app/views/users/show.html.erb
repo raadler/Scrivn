@@ -5,6 +5,7 @@
   <div class="small-3 columns">
     <div class="ink-details">
       <%= link_to "#{ink.ink.color_name}", user_user_ink_path(@user, ink.id)%>
+      <%= image_tag ink.ink.ink_pic %>
       <% if @user == current_user %>
         <p><%= link_to "Delete", user_user_ink_path(@user, ink.id), method: :delete%></p>
       <% end %>

@@ -9,9 +9,14 @@
       <div class="small-12 medium-3 columns">
         <div class="ink-details">
           <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
-          <p><%= ink.manufacturer %></p>
-          <p><%= ink.line %></p>
-          <p><%= ink.description %></p>
+          <% if !ink.ink_pic.blank? %>
+            <div class="picture-small"><%= image_tag ink.ink_pic %></div>
+            <p><%= ink.manufacturer %></p>
+          <% else %>
+            <p><%= ink.manufacturer %></p>
+            <p><%= ink.line %></p>
+            <p><%= ink.description %></p>
+          <% end %>
         </div>
       </div>
     <% end %>

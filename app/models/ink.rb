@@ -4,4 +4,6 @@ class Ink < ActiveRecord::Base
 
   has_many :user_inks
   has_many :users, through: :user_inks
+
+  mount_uploader :ink_pic, InkPicUploader
 end
