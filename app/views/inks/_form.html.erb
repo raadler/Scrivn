@@ -17,6 +17,13 @@
       <%= f.label :description, 'Description' %>
       <%= f.text_field :description %>
     </div>
+    <% if current_user.admin %>
+      <div class="form-field">
+        <%= f.label :ink_pic , "Photo"%><br />
+        <%= f.file_field :ink_pic %>
+        <%= f.hidden_field :ink_pic_cache %>
+      </div>
+    <% end %>
     <%= f.submit class: 'button' %>
   </div>
   <% end %>

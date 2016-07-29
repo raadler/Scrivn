@@ -59,7 +59,7 @@ class InksController < ApplicationController
 
     def ink_params
       params.require(:ink).permit(
-        :color_name, :manufacturer, :description, :line
+        :color_name, :manufacturer, :description, :line, :ink_pic
       )
     end
 end
