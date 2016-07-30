@@ -1,5 +1,5 @@
 <div class="ink-details">
-<p><%= @color_name %></p>
+<p><%= link_to "#{@color_name}", ink_path(@ink)%></p>
 <p><%= @manufacturer %></p>
 <% if @line %>
   <p><%= @line %></p>
