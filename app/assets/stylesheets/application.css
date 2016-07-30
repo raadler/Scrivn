@@ -61,7 +61,7 @@ a {
 
 .ink-details {
   color: #8F0000;
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.75);
   font-family: 'Eagle Lake', cursive;
   font-size: 20px;
   margin: 3px !important;
@@ -72,13 +72,14 @@ a {
 .picture-small {
   max-width:250px;
   max-height:250px;
+  margin: auto;
 }
 
 .picture {
   max-width:500px;
   max-height:500px;
-  padding-left: auto;
-  padding-right: auto;
+  margin: auto;
+  padding-top: 18px;
 }
 
 .add-delete {

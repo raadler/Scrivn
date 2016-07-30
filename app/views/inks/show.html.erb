@@ -4,7 +4,7 @@
       <%= button_to "Add to My Collection", user_user_inks_path(user_id: current_user.id, ink_id: @ink.id), action: "create", method: :post %>
     </div>
   <% end %>
-  <div class="show-details">
+  <div class="show-details text-center">
     <% unless @ink.ink_pic.blank? %>
       <div class="picture"><%= image_tag @ink.ink_pic %></div>
     <% end %>
