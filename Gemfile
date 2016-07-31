@@ -35,6 +35,7 @@ gem 'rails_12factor'
 gem 'carrierwave'
 gem 'devise'
 gem 'omniauth'
+gem 'fog'
 
 
 group :development, :test do
