@@ -70,9 +70,14 @@ a {
 }
 
 .picture-small {
-  max-width:200px;
-  max-height:200px;
+  max-width:250px;
+  max-height:250px;
   margin: auto;
+}
+
+.picture-small img {
+  width:220px;
+  height:200px;
 }
 
 .picture {
