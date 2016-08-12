@@ -34,4 +34,4 @@ AWS_SECRET_KEY=
 S3_BUCKET=
 ```
 
-The `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, and `S3_BUCKET` are used when uploading user photos to Amazon S3.
+The `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, and `S3_BUCKET` are used when uploading ink photos to Amazon S3.
