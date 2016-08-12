@@ -16,7 +16,7 @@ To run the app locally, run the following commands:
 
 ```no-highlight
 $ git clone https://github.com/raadler/Scrivn.git
-$ cd revue
+$ cd Scrivn
 $ bundle
 ```
 
