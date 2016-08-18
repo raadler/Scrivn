@@ -41,4 +41,5 @@ The `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, and `S3_BUCKET` are used when uploading 
 
 (If you find a bug, please message me to report it.)
 
--When editing an ink, the picture url is reset to blank, even if a picture has previously been uploaded
+* When editing an ink, the picture url is reset to blank, even if a picture has previously been uploaded
+* Mailers for registration and password recovery are not operational
