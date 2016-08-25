@@ -1,9 +1,5 @@
 # Scrivn
 
-![Build Status](https://codeship.com/projects/25b4cdd0-2f3a-0134-7f62-4a25dba64f1f/status?branch=master)
-![Code Climate](https://codeclimate.com/github/raadler/Scrivn.png)
-![Coverage Status](https://coveralls.io/repos/raadler/Scrivn/badge.png)
-
 Scrivn is an app for fountain pen inks. Users can add inks to their
 personal collections, and get the details and see a sample of a given ink in the database. More features are in the works, including extending the current ones to fountain pens.
 
