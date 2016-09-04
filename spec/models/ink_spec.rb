@@ -8,4 +8,6 @@ describe Ink do
   it { should_not have_valid(:manufacturer).when(nil, '') }
 
   it { should have_valid(:description).when('I love this ink so much! I use it for everything.') }
+
+  it { should have_valid(:line).when('1670') }
 end
