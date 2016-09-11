@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'inks#index'
+  root to: 'welcome#index'
   resources :inks
+
+  resources :welcome, only: [:index]
 
   devise_for :users
   devise_scope :user do
