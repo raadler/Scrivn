@@ -45,6 +45,11 @@
         null,
         null
       ],
+      "/Users/racheladler/challenges/Scrivn/app/models/nib.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/racheladler/challenges/Scrivn/app/models/pen.rb": [
         1,
         1,
@@ -67,7 +72,7 @@
         null,
         null,
         1,
-        23,
+        7,
         null,
         null,
         1,
@@ -149,6 +154,12 @@
         null,
         32,
         32,
+        null,
+        null
+      ],
+      "/Users/racheladler/challenges/Scrivn/app/controllers/welcome_controller.rb": [
+        1,
+        1,
         null,
         null
       ],
@@ -259,11 +270,8 @@
         0,
         0,
         0
-      ],
-      "/Users/racheladler/challenges/Scrivn/app/controllers/welcome_controller.rb": [
-
       ]
     },
-    "timestamp": 1473030435
+    "timestamp": 1474242584
   }
 }
