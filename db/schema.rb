@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160904225303) do
+ActiveRecord::Schema.define(version: 20160918230321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20160904225303) do
     t.text   "description"
     t.string "line"
     t.string "ink_pic"
+  end
+
+  create_table "nibs", force: :cascade do |t|
+    t.string "nib_size"
+    t.string "nib_type", default: "normal", null: false
   end
 
   create_table "pens", force: :cascade do |t|
