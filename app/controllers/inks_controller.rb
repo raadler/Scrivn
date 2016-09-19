@@ -50,16 +50,15 @@ class InksController < ApplicationController
   end
 
   def destroy
-
     Ink.find(params[:id]).destroy
     redirect_to inks_path
   end
 
   private
 
-    def ink_params
-      params.require(:ink).permit(
-        :color_name, :manufacturer, :description, :line, :ink_pic
-      )
-    end
+  def ink_params
+    params.require(:ink).permit(
+      :color_name, :manufacturer, :description, :line, :ink_pic
+    )
+  end
 end
