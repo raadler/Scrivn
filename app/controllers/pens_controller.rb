@@ -22,10 +22,10 @@ class PensController < ApplicationController
     @pen = Pen.new(pen_params)
 
     if @pen.save
-      flash[:notice] = "Pen successfully added!"
+      flash[:notice] = 'Pen successfully added!'
       redirect_to pen_path(@pen)
     else
-      flash[:notice] = "There were problems saving your pen."
+      flash[:notice] = 'There were problems saving your pen.'
       flash[:errors] = @pen.errors.full_messages.join(", ")
       render :new
     end
@@ -35,10 +35,10 @@ class PensController < ApplicationController
     @pen = Pen.find(params[:id])
 
     if @pen.update_attributes(pen_params)
-      flash[:notice] = "Pen successfully saved!"
+      flash[:notice] = 'Pen successfully saved!'
       redirect_to @pen
     else
-      flash[:notice] = "There were problems saving your pen."
+      flash[:notice] = 'There were problems saving your pen.'
       flash[:errors] = @pen.errors.full_messages.join(", ")
       render :edit
     end
