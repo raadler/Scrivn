@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
+
   resources :inks
+
+  resources :pens
 
   resources :welcome, only: [:index]
 
