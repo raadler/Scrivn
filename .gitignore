@@ -16,3 +16,5 @@
 .env
 
 /coverage
+
+secrets.yml
