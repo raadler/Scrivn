@@ -1,9 +1,12 @@
 # Scrivn
+This application can be seen at: http://scrivn.herokuapp.com/
 
-Scrivn is an app for fountain pen inks. Users can add inks to their
-personal collections, and get the details and see a sample of a given ink in the database. More features are in the works, including extending the current ones to fountain pens.
+Scrivn is an app for fountain pens and fountain pen inks, which I originally built as my capstone project for Launch Academy. It was my first complete rails app that I built from scratch, and I learned about managing complex relationships between different models using ActiveRecord, designing a front end in Foundation, and integrating gems such as Carrierwave And Devise.
 
-I originally built this as my breakable toy for Launch Academy. I want to expand it and turn it into a resource for fountain pen enthusiasts, and would love help from other developers, especially if you're interested in fountain pens.
+In this app, users can add pens and inks to their
+personal collections, and get the details and see a sample of a given ink in the database. More features are in the works, including reviews for pens and inks, and ink matching suggestions.
+
+I want to eventually expand this app and turn it into a resource for fountain pen enthusiasts, and would love help from other developers, especially if you're interested in fountain pens.
 
 
 ## Setup
