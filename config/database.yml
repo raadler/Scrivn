@@ -8,6 +8,7 @@ development:
   <<: *default
   database: Scrivn_development
 
+test:
   <<: *default
   database: Scrivn_test
 
