@@ -18,3 +18,5 @@
 /coverage
 
 /secrets.yml
+
+config/database.yml
