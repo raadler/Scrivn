@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 
   has_many :user_inks
   has_many :inks, through: :user_inks
+  has_many :user_inks, dependent: :destroy
 end
