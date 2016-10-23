@@ -28,12 +28,12 @@ $ rake db:setup
 Open the `.env` file to edit the environment variables:
 
 ```no-highlight
-AWS_ACCESS_KEY=
-AWS_SECRET_KEY=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
 S3_BUCKET=
 ```
 
-The `AWS_ACCESS_KEY`, `AWS_SECRET_KEY`, and `S3_BUCKET` are used when uploading ink photos to Amazon S3.
+The `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `S3_BUCKET` are used when uploading ink photos to Amazon S3.
 
 
 ##Known Bugs
