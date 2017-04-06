@@ -14,7 +14,6 @@ class UserInksController < ApplicationController
 
   def create
     @user_ink = UserInk.new
-    @current_user = current_user.id
     @ink = Ink.find(params[:ink_id])
     @user_ink.user_id = @current_user
     @user_ink.ink_id = @ink
