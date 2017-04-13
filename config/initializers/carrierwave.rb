@@ -1,3 +1,5 @@
+require 'fog/aws'
+
 CarrierWave.configure do |config|
   if !Rails.env.test?
     config.fog_credentials = {

@@ -37,7 +37,8 @@ gem 'sprockets', '3.6.3'
 gem 'carrierwave'
 gem 'devise'
 gem 'omniauth'
-gem 'fog-aws'
+gem 'fog'
+
 
 
 group :development, :test do
