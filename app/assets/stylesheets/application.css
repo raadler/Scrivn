@@ -25,19 +25,19 @@
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: top;
-   font-family: 'Eagle Lake', cursive;
+   font-family: 'Proza Libre', sans-serif;
  }
 
 h1 {
   color: #8F0000;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Proza Libre', sans-serif;
   text-align: center;
   background:rgba(255,255,255,0.5);
 }
 
 h2 {
   color: #8F0000;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Proza Libre', sans-serif;
   text-align: center;
   background:rgba(255,255,255,0.5);
 }
@@ -45,7 +45,7 @@ h2 {
 h3 {
   background:rgba(255,255,255,0.5);
   color: #8F2621;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Proza Libre', sans-serif;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -58,13 +58,13 @@ h5 {
 
 a {
   color: #1A777C;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Proza Libre', sans-serif;
 }
 
 .ink-details {
   color: #8F0000;
   background:rgba(255,255,255,0.75);
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Proza Libre', sans-serif;
   font-size: 20px;
   margin: 3px !important;
   padding-left: 3px;
@@ -132,7 +132,7 @@ header {
 
 .menu-text {
   color: #8F0000;
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Proza Libre', sans-serif;
   text-align: center;
   background:rgba(255,255,255,0.5);
 }
