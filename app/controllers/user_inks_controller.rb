@@ -1,6 +1,5 @@
 class UserInksController < ApplicationController
   before_action :authenticate_user!
-  # @current_user = current_user.id
 
   def show
     @user_ink = UserInk.find(params[:id])
