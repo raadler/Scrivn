@@ -1,10 +1,10 @@
 class UserInksController < ApplicationController
   before_action :authenticate_user!
-  @current_user = current_user.id
+  # @current_user = current_user.id
 
   def show
     @user_ink = UserInk.find(params[:id])
-    @current_user = current_user.id
+    @user = current_user
     @ink = Ink.find(@user_ink.ink_id)
     @color_name = @ink.color_name
     @manufacturer = @ink.manufacturer
@@ -13,10 +13,11 @@ class UserInksController < ApplicationController
   end
 
   def create
+    @user = current_user
     @user_ink = UserInk.new
     @ink = Ink.find(params[:ink_id])
-    @user_ink.user_id = @current_user
-    @user_ink.ink_id = @ink
+    @user_ink.user_id = @user.id
+    @user_ink.ink_id = @ink.id
 
     if @user_ink.save
       flash[:notice] = 'Ink successfully added to collection!'
