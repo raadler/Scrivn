@@ -1,7 +1,10 @@
 class UserInksController < ApplicationController
+  before_action :authenticate_user!
+  # @current_user = current_user.id
 
   def show
     @user_ink = UserInk.find(params[:id])
+    @user = current_user
     @ink = Ink.find(@user_ink.ink_id)
     @color_name = @ink.color_name
     @manufacturer = @ink.manufacturer
@@ -10,10 +13,10 @@ class UserInksController < ApplicationController
   end
 
   def create
+    @user = current_user
     @user_ink = UserInk.new
-    @user = current_user.id
     @ink = Ink.find(params[:ink_id])
-    @user_ink.user_id = @user
+    @user_ink.user_id = @user.id
     @user_ink.ink_id = @ink.id
 
     if @user_ink.save
@@ -42,7 +45,7 @@ class UserInksController < ApplicationController
       flash[:notice] = 'Ink successfully updated'
       redirect_to user_user_ink_path(@user, @user_ink)
     else
-      flash[:notice] = "There were problems saving your ink."
+      flash[:notice] = 'There were problems saving your ink.'
       flash[:errors] = @user_ink.errors.full_messages.join(", ")
       render :new
     end

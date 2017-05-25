@@ -236,8 +236,11 @@
       ],
       "/Users/racheladler/challenges/Scrivn/app/controllers/user_inks_controller.rb": [
         1,
+        1,
+        null,
         null,
         1,
+        4,
         4,
         4,
         4,
@@ -331,6 +334,6 @@
         0
       ]
     },
-    "timestamp": 1477251348
+    "timestamp": 1495673413
   }
 }

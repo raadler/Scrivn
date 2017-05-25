@@ -3,6 +3,7 @@ require 'rails_helper'
 feature 'creates user ink' do
   let!(:my_ink) { FactoryGirl.create(:ink) }
   let!(:user) { FactoryGirl.create(:user) }
+  let!(:another_user) { FactoryGirl.create(:user) }
 
   scenario "inauthenticated user can't add ink to collection" do
     visit ink_path(my_ink)
