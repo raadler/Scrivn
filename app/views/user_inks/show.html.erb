@@ -1,11 +1,11 @@
 <div class="ink-details">
-<p><%= link_to "#{@color_name}", ink_path(@ink)%></p>
-<p><%= @manufacturer %></p>
-<% if @line %>
-  <p><%= @line %></p>
+<p><%= link_to "#{@ink.color_name}", ink_path(@ink)%></p>
+<p><%= @ink.manufacturer %></p>
+<% if @ink.line %>
+  <p><%= @ink.line %></p>
 <% end %>
-<% if @description %>
-  <p><%= @description %></p>
+<% if @ink.description %>
+  <p><%= @ink.description %></p>
 <% end %>
 <% if @user_ink.user_id == current_user.id %>
   <p><%= link_to "Edit Ink Details", edit_user_user_ink_path(@user_ink.user_id, @user_ink) %></p>
