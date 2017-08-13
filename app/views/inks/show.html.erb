@@ -5,11 +5,13 @@
     </div>
   <% end %>
   <div class="show-details text-center">
-    <% if @ink.ink_pic.blank? %>
-      <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
-    <% else %>
-      <div class="picture"><%= image_tag(@ink.ink_pic) %></div>
-    <% end %>
+    <div class="picture">
+      <% if @ink.ink_pic.blank? %>
+        <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
+      <% else %>
+        <%= image_tag(@ink.ink_pic) %>
+      <% end %>
+    </div>
     <p class="name"><%= @ink.color_name %></p>
     <p><%= @ink.manufacturer %></p>
     <p><%= @ink.line %></p>
