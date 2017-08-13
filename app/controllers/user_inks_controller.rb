@@ -5,10 +5,6 @@ class UserInksController < ApplicationController
     @user_ink = UserInk.find(params[:id])
     @user = current_user
     @ink = Ink.find(@user_ink.ink_id)
-    @color_name = @ink.color_name
-    @manufacturer = @ink.manufacturer
-    @line = @ink.line
-    @description = @ink.description
   end
 
   def create
@@ -31,9 +27,7 @@ class UserInksController < ApplicationController
   def edit
     @user_ink = UserInk.find(params[:id])
     @ink = Ink.find(@user_ink.ink_id)
-    @color_name = @ink.color_name
     @user = User.find(@user_ink.user_id)
-    @submit = "Save Changes"
   end
 
   def update
