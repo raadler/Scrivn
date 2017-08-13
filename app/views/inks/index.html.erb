@@ -6,16 +6,15 @@
   <h1 class="title">Inks</h1>
   <div class="row">
     <% @inks.each do |ink| %>
-      <div class="small-12 medium-3 columns">
+      <div class="small-12 medium-6 large-3 columns">
         <div class="ink-details">
           <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
           <% if !ink.ink_pic.blank? %>
             <div class="picture-small"><%= image_tag ink.ink_pic %></div>
             <p><%= ink.manufacturer %></p>
           <% else %>
+            <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
             <p><%= ink.manufacturer %></p>
-            <p><%= ink.line %></p>
-            <p><%= ink.description %></p>
           <% end %>
         </div>
       </div>
