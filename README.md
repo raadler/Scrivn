@@ -42,3 +42,4 @@ The `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `S3_BUCKET` are used when 
 
 * When editing an ink, the picture url is reset to blank, even if a picture has previously been uploaded
 * Mailers for registration and password recovery are not operational
+* There's nothing stopping a user from adding more than one instance of the same ink to their collection
