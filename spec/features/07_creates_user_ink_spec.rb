@@ -15,7 +15,7 @@ feature 'creates user ink' do
     sign_in(user)
     visit ink_path(my_ink)
 
-    click_button 'Add to My Collection'
+    click_on 'Add to My Collection'
 
     expect(page).to have_content('Ink successfully added to collection!')
     expect(page).to have_content(my_ink.color_name)
