@@ -1,7 +1,7 @@
 <div class="small-11 columns">
   <% if user_signed_in? %>
     <div class="add-to-collection">
-      <%= button_to "Add to My Collection", user_user_inks_path(user_id: current_user.id, ink_id: @ink.id), action: "create", method: :post %>
+      <%= link_to("Add to My Collection", user_user_inks_path(user_id: current_user.id, ink_id: @ink.id), action: "create", method: :post) %>
     </div>
   <% end %>
   <div class="show-details text-center">
