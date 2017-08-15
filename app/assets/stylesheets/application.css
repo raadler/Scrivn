@@ -19,11 +19,12 @@
  * 1A777C
 
  */
+ a {
+   color: #3B3355;
+   font-family: 'Proza Libre', sans-serif;
+ }
+
  body {
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: top;
    font-family: 'Proza Libre', sans-serif;
  }
 
@@ -62,9 +63,23 @@ h5 {
   width: 125px;
 }
 
-a {
+label {
   color: #3B3355;
-  font-family: 'Proza Libre', sans-serif;
+}
+
+.add-delete {
+  background:rgba(255,255,255,0.5);
+  width: 125px;
+}
+
+.add-ink {
+  background:rgba(255,255,255,0.5);
+  padding-left: 10px;
+}
+
+.add-to-collection {
+  margin-left: -30px;
+  color: #3B3355;
 }
 
 .ink-details {
@@ -95,21 +110,8 @@ a {
   padding-top: 18px;
 }
 
-.add-delete {
-  background:rgba(255,255,255,0.5);
-  width: 125px;
-}
-
-label {
-  color: #3B3355;
-}
-
 .form-field {
   color: #3B3355;
-}
-
-.form-field input {
-  background-color:rgba(255,255,255,0.5);
 }
 
 .name {
@@ -142,11 +144,6 @@ label {
   background: #BFCDE0;
 }
 
-.add-ink {
-  background:rgba(255,255,255,0.5);
-  padding-left: 10px;
-}
-
 .newinkform,
 .userinkform {
   background:rgba(255,255,255,0.5);
@@ -157,9 +154,16 @@ label {
 }
 
 .welcome-text {
-  color: #6F3DB7;
+  color: #3B3355;
   font-size: 30px;
   text-align: center;
+}
+
+.unhappy {
+  color: #3B3355;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #logo {
