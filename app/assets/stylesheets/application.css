@@ -34,14 +34,14 @@ form {
 }
 
 h1 {
-  color: #8F0000;
+  color: #3B3355;
   font-family: 'Proza Libre', sans-serif;
   text-align: center;
   background:rgba(255,255,255,0.5);
 }
 
 h2 {
-  color: #8F0000;
+  color: #3B3355;
   font-family: 'Proza Libre', sans-serif;
   text-align: center;
   background:rgba(255,255,255,0.5);
@@ -49,7 +49,7 @@ h2 {
 
 h3 {
   background:rgba(255,255,255,0.5);
-  color: #8F2621;
+  color: #5D5D81;
   font-family: 'Proza Libre', sans-serif;
   margin-left: auto;
   margin-right: auto;
@@ -63,18 +63,16 @@ h5 {
 }
 
 a {
-  color: #1A777C;
+  color: #3B3355;
   font-family: 'Proza Libre', sans-serif;
 }
 
 .ink-details {
-  color: #8F0000;
-  background: #6BD6F9;
+  color: #3B3355;
+  font-size: 16px;
   font-family: 'Proza Libre', sans-serif;
-  font-size: 20px;
-  margin: 3px !important;
-  padding-left: 3px;
   text-align: center;
+  margin: inherit;
 }
 
 .picture-small {
@@ -86,6 +84,8 @@ a {
 .picture-small img {
   width:220px;
   height:200px;
+  position: relative;
+  color: #666666;
 }
 
 .picture {
@@ -101,11 +101,11 @@ a {
 }
 
 label {
-  color: #8F0000;
+  color: #3B3355;
 }
 
 .form-field {
-  color: #8F0000;
+  color: #3B3355;
 }
 
 .form-field input {
@@ -120,7 +120,7 @@ label {
 .show-details {
   margin-top: 5px;
   background:rgba(255,255,255,0.5);
-  color: #8F0000;
+  color: #3B3355;
   font-size: 20px;
 }
 
@@ -131,21 +131,20 @@ label {
   width: 200px;
 }
 
-header {
-  background:rgba(255,255,255,0.5);
+.top-bar, .top-bar ul {
+  background: #BFCDE0;
 }
 
 .menu-text {
-  color: #8F0000;
+  color: #3B3355;
   font-family: 'Proza Libre', sans-serif;
   text-align: center;
-  background:rgba(255,255,255,0.5);
+  background: #BFCDE0;
 }
 
 .add-ink {
   background:rgba(255,255,255,0.5);
-  width: 135px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .newinkform,
