@@ -1,22 +1,27 @@
 <h1><%= @user.username %>'s Inks</h1>
 
 <div class="row">
-<% @user_inks.each do |ink| %>
-  <div class="small-12 medium-6 large-3 columns">
-    <div class="ink-details">
-      <%= link_to "#{ink.ink.color_name}", user_user_ink_path(@user, ink.id)%>
-      <div class="picture-small">
-        <% if ink.ink.ink_pic %>
-          <%= image_tag ink.ink.ink_pic %>
-        <% else %>
-          <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
+  <% @user_inks.each do |ink| %>
+    <% if ink == @user_inks.last %>
+      <% end_class = 'end' %>
+    <% else %>
+      <% end_class = '' %>
+    <% end %>
+    <div class="small-12 medium-6 large-3 columns <%= end_class %>">
+      <div class="ink-details">
+        <%= link_to "#{ink.ink.color_name}", user_user_ink_path(@user, ink.id)%>
+        <div class="picture-small">
+          <% if ink.ink.ink_pic %>
+            <%= image_tag ink.ink.ink_pic %>
+          <% else %>
+            <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
+          <% end %>
+        </div>
+
+        <% if @user == current_user %>
+          <p><%= link_to "Delete", user_user_ink_path(@user, ink.id), method: :delete%></p>
         <% end %>
       </div>
-
-      <% if @user == current_user %>
-        <p><%= link_to "Delete", user_user_ink_path(@user, ink.id), method: :delete%></p>
-      <% end %>
-  </div>
-</div>
-<% end %>
+    </div>
+  <% end %>
 </div>
