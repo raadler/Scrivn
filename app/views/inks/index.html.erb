@@ -6,7 +6,12 @@
   <h1 class="title">Inks</h1>
   <div class="row">
     <% @inks.each do |ink| %>
-      <div class="small-12 medium-6 large-3 columns">
+      <% if ink == @inks.last %>
+        <% end_class = 'end' %>
+      <% else %>
+        <% end_class = '' %>
+      <% end %>
+      <div class="small-12 medium-6 large-3 columns <%= end_class %>">
         <div class="ink-details">
           <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
           <div class="picture-small">
