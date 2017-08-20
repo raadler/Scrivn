@@ -12,14 +12,14 @@
         <%= link_to "#{ink.ink.color_name}", user_user_ink_path(@user, ink.id)%>
         <div class="picture-small">
           <% if ink.ink.ink_pic %>
-            <%= image_tag ink.ink.ink_pic %>
+            <%= link_to image_tag(ink.ink.ink_pic), user_user_ink_path(@user, ink.id) %>
           <% else %>
-            <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
+            <%= link_to image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project'), user_user_ink_path(@user, ink.id) %>
           <% end %>
         </div>
 
         <% if @user == current_user %>
-          <p><%= link_to "Delete", user_user_ink_path(@user, ink.id), method: :delete%></p>
+          <p><%= link_to "Delete?", user_user_ink_path(@user, ink.id), method: :delete%></p>
         <% end %>
       </div>
     </div>
