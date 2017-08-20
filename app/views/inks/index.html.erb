@@ -16,10 +16,10 @@
           <p class="name"><%= link_to "#{ink.color_name}", ink_path(ink) %></p>
           <div class="picture-small">
             <% if !ink.ink_pic.blank? %>
-              <%= image_tag ink.ink_pic %>
+              <%= link_to image_tag(ink.ink_pic, :alt => 'ink bottle by bezier master from the Noun Project'), ink_path(ink) %>
               <p><%= ink.manufacturer %></p>
             <% else %>
-              <%= image_tag('ink_bottle_icon.png', :alt => 'ink bottle by bezier master from the Noun Project') %>
+              <%= link_to image_tag('ink_bottle_icon.png'), ink_path(ink) %>
               <p><%= ink.manufacturer %></p>
             <% end %>
           </div>
